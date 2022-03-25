@@ -1,6 +1,16 @@
 import Calculator
 import unittest
-class TestCalculator(unittest.TestCase):
+
+
+class TestClass(unittest.TestCase):
+    def setUp(self):
+        self.x=34
+        self.y=30
+    def tearDown(self):
+        self.x=0
+        self.y=0
+
+#class TestCalculator(unittest.TestCase):
     def test_add(self):
         x = 10
         y = 20
