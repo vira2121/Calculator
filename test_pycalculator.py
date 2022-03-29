@@ -1,13 +1,13 @@
 import Calculator
 import pytest
-
+@pytest.mark.xfail
 @pytest.mark.parametrize("a,b,c",[(3,2,5),(4,2,6),(5,5,10),(5,5,9)])
 def test_add(a,b,c):
     # x=10
     # y=20
     r=Calculator.add(a,b)
     assert r == c
-
+@pytest.mark.xfail
 @pytest.mark.parametrize("a,b,c",[(3,2,1),(4,2,2),(5,5,0),(5,5,9)])
 def test_sub(a,b,c):
     # x=10
